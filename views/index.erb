@@ -5,24 +5,31 @@
 <div class="row">
   <% @products.each do |product| %>
     <div class="col-md-4">
+
       <div class="mt-2 mb-2">
         <%= product.title %>
       </div>
+
       <div class="">
         <img class="rounded" src="<%= product.path_to_image %>" alt="pizza <%= product.title %>">
       </div>
+
       <div class="text-muted">
         <%= product.description %>
       </div>
+
       <div class="">
         <small>Size:  <%= product.size %> sm</small>
       </div>
+
       <div class="">
         <small>Price:  <%= product.price %> rub</small>
       </div>
+
       <div class="">
-        <button class="btn btn-success btn-sm pr-5 pl-5" type="button" name="button">Buy</button>
+        <button class="btn btn-success btn-sm pr-5 pl-5" type="button" name="button" onclick="add_to_cart()">Add to cart</button>
       </div>
+
     </div>
   <% end %>
 </div>
