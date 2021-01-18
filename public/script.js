@@ -1,11 +1,13 @@
 function test() {
   let x = window.localStorage.getItem('bbb')
-  x = x * 1 + 1
-
+  x++
   window.localStorage.setItem('bbb', x)
   alert(x)
 }
 
 function add_to_cart(id) {
-  alert('You added pizza with id: ' + id)
+  let key = 'product_' + id
+  let x = window.localStorage.getItem(key)
+  x++
+  window.localStorage.setItem(key, x)
 }
