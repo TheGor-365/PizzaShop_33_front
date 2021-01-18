@@ -5,7 +5,6 @@
 <div class="row">
   <% @products.each do |product| %>
     <div class="col-md-4">
-
       <div class="mt-2 mb-2">
         <%= product.title %>
       </div>
@@ -16,9 +15,11 @@
         <%= product.description %>
       </div>
       <div class="">
-        <%= product.title %>
+        <small>Size:  <%= product.size %> sm</small>
       </div>
-
+      <div class="">
+        <small>Price:  <%= product.price %> rub</small>
+      </div>
     </div>
   <% end %>
 </div>
